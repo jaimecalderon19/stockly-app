@@ -3,6 +3,7 @@ import 'package:stockly/core/const.dart';
 
 class CustomTextField extends StatefulWidget {
   final String label;
+  final Widget? icon;
   final String placeholder;
   final TextInputType inputType;
   final bool obscureText;
@@ -20,6 +21,7 @@ class CustomTextField extends StatefulWidget {
   const CustomTextField({
     super.key,
     required this.label,
+    this.icon,
     required this.placeholder,
     required this.inputType,
     required this.controller,
@@ -58,6 +60,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           keyboardType: widget.inputType,
           obscureText: widget.obscureText,
           decoration: InputDecoration(
+            suffixIcon: widget.icon,
             hintText: widget.placeholder,
             hintStyle: const TextStyle(color: Colors.grey, fontWeight: FontWeight.w300),
             enabledBorder: OutlineInputBorder(

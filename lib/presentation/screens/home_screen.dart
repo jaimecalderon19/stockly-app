@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stockly/presentation/screens/product_list_screen.dart';
 import 'package:stockly/presentation/widgets/card/action_card_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -60,12 +61,15 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 30),
 
                 // Tarjetas de acción
-                const ActionCardWidget(
+                ActionCardWidget(
                   icon: Icons.shopping_bag_outlined,
                   title: "Explorar Productos",
                   subtitle: "Navega por el catálogo completo",
+                  onTap: () {
+                    Navigator.pushNamed(context, ProductListScreen.routeName);
+                  },
                 ),
-                const ActionCardWidget(
+                ActionCardWidget(
                   icon: Icons.bookmark_border_rounded,
                   title: "Mis Guardados",
                   subtitle: "Accede a tus productos favoritos",

@@ -5,18 +5,23 @@ class ProductCardWidget extends StatelessWidget {
   final String title;
   final String category;
   final double price;
-
+  final VoidCallback? onTap;
+  
   const ProductCardWidget({
     super.key,
     required this.imageUrl,
     required this.title,
     required this.category,
     required this.price,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
       margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -79,6 +84,7 @@ class ProductCardWidget extends StatelessWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }

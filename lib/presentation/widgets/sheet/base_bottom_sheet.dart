@@ -2,15 +2,18 @@ import 'package:flutter/material.dart';
 
 class BaseBottomSheet extends StatelessWidget {
   final Widget content;
+  final double? maxHeight;
 
   const BaseBottomSheet({
     Key? key,
     required this.content,
+    this.maxHeight,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: maxHeight,
       padding: const EdgeInsets.fromLTRB(16.0, 14.0, 16.0, 32.0),
       decoration: BoxDecoration(
         color: Colors.white,
