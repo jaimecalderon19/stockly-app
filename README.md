@@ -1,8 +1,8 @@
 # 🛍️ Stockly – Gestión de productos con Flutter + Cubit
 
 <p align="center">
-  <img src="https://github.com/jaimecalderon19/stockly-app/screen-home.png" alt="Imagen 1" width="45%"/>
-  <img src="https://github.com/jaimecalderon19/stockly-app/screen-list.png" alt="Imagen 2" width="45%"/>
+  <img src="https://github.com/jaimecalderon19/stockly-app/blob/main/screen-home.png" alt="Capture 1" width="45%"/>
+  <img src="https://github.com/jaimecalderon19/stockly-app/blob/main/screen-list.png" alt="Capture 2" width="45%"/>
 </p>
 
 
