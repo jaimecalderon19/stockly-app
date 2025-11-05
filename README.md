@@ -1,5 +1,11 @@
 # 🛍️ Stockly – Gestión de productos con Flutter + Cubit
 
+<p align="center">
+  <img src="https://github.com/jaimecalderon19/stockly-app/screen-home.png" alt="Imagen 1" width="45%"/>
+  <img src="https://github.com/jaimecalderon19/stockly-app/screen-list.png" alt="Imagen 2" width="45%"/>
+</p>
+
+
 **Stockly** es una aplicación móvil desarrollada en **Flutter** que permite gestionar una lista de productos obtenidos desde la **[Fake Store API](https://fakestoreapi.com/)**.  
 El usuario puede consultar los productos, guardarlos localmente con nombres personalizados, editarlos o eliminarlos, y visualizar los detalles de cada uno.
 
