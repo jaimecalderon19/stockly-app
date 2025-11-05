@@ -7,6 +7,8 @@ import 'package:stockly/logic/api_cubit/api_state.dart';
 import 'package:stockly/logic/prefs_cubit/preference_cubit.dart';
 import 'package:stockly/logic/prefs_cubit/preference_state.dart';
 import 'package:stockly/presentation/widgets/button_custom_widget.dart';
+import 'package:stockly/presentation/widgets/card/product_card_widget.dart';
+import 'package:stockly/presentation/widgets/header_title_widget.dart';
 import 'package:stockly/presentation/widgets/sheet/show_dropdown.dart';
 import 'package:stockly/presentation/widgets/text_field_custom_widget.dart';
 
@@ -97,7 +99,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Guardar producto')),
+      appBar: AppBar(title: HeaderTitle(text: "Guardar producto")),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
@@ -155,8 +157,22 @@ class _AddProductScreenState extends State<AddProductScreen> {
               inputType: TextInputType.text,
               isRequired: true,
             ),
-            const SizedBox(height: 20),
-
+            const SizedBox(height: 10),
+            if (_selectedProduct != null)...[
+              const Text(
+                "Vista previa del producto",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight:FontWeight.w500)
+              ,),
+              ProductCardWidget(
+                imageUrl: _selectedProduct!.image,
+                title: _selectedProduct!.title,
+                category: _selectedProduct!.category, 
+                price: _selectedProduct!.price
+              ),
+            ],
+            SizedBox(height: 20),
             Row(
               children: [
                 Expanded(child: ButtonCustom(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stockly/presentation/screens/product_list_screen.dart';
+import 'package:stockly/presentation/screens/saved_products_screen.dart';
 import 'package:stockly/presentation/widgets/card/action_card_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -73,6 +74,9 @@ class HomeScreen extends StatelessWidget {
                   icon: Icons.bookmark_border_rounded,
                   title: "Mis Guardados",
                   subtitle: "Accede a tus productos favoritos",
+                  onTap: () {
+                    Navigator.pushNamed(context, SavedProductsScreen.routeName);
+                  },
                 ),
 
                 const SizedBox(height: 30),
